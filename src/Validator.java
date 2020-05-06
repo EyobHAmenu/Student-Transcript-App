@@ -12,8 +12,8 @@ public class Validator extends Transcript{
     }
 
     public boolean validateGrade(char grade){
-        if(grade == 'A' || grade == 'a' || grade == 'B' || grade == 'b' || grade == 'C' || grade == 'c' ||
-                grade == 'D' || grade == 'd' || grade == 'F' || grade == 'f'){
+        grade = Character.toUpperCase(grade);
+        if(grade == 'A' || grade == 'B' ||  grade == 'C' || grade == 'D' || grade == 'F' ){
             return false;
         }
         return true;

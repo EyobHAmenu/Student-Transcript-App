@@ -18,17 +18,21 @@ public class CourseEnrollment {
     public void setCredits(double credits) { this.credits = credits; }
 
     public char getGrades() { return grades; }
-    public void setGrades(char grades) { this.grades = grades; }
+    public void setGrades(char grades) {
+        grades =Character.toUpperCase(grades);
+        this.grades = grades;
+    }
 
     public double getCoursePoint() { return coursePoint; }
     public void setCoursePoint(char grades) {
-        if(grades=='A' || grades=='a'){
+        grades =Character.toUpperCase(grades);
+        if(grades=='A'){
             this.coursePoint = 4;
-        }else if(grades=='B' || grades=='b'){
+        }else if(grades=='B'){
             this.coursePoint = 3;
-        }else if(grades=='C' || grades=='c'){
+        }else if(grades=='C'){
             this.coursePoint = 2;
-        }else if(grades=='D' || grades=='d'){
+        }else if(grades=='D'){
             this.coursePoint = 1;
         }else{
             this.coursePoint = 0;
